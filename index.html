@@ -7,36 +7,29 @@
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> <!--Links Tailwind in the project-->
     <link rel="stylesheet" href="/styles/main.css">
 
-    <!--this is the Font Awesome link for all the icons-->
+    <!--Font Awesome link for all the icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <!-- icon using our company name -->
-    <link rel="icon" href="/images/favicon_io/favicon.ico">
-
-    <title>NB²</title>
-
+    <!-- Tab icon & company name -->
+    <link rel="icon" href="/images/Logo.svg">
+    <title>NB²Squared</title>
 </head>
 <body>
   <!-- Hero Section -->
-  <section class="flex flex-col min-h-screen bg-slate-800 text-white bg-center bg-cover bg-blend-overlay bg-fixed bg-black/30" style="background-image: url('/images/heroBg.jpg')">
-
-
+  <section class="flex flex-col min-h-screen bg-slate-800 bg-center bg-cover bg-blend-overlay bg-fixed bg-black/30">
     <!-- Navbar -->
-    <div class="flex items-center h-20 ">
-
-    <!-- Navbar Logo -->
-    <div class="text-4xl font-light uppercase absolute p-5">
-        NB²
-        </div>
+    <div class="flex items-center h-20 border-2 p-5">
+      <!-- Navbar Logo -->
+      <div class="text-4xl font-light uppercase absolute p-5">
+        <img class="h-16" src="/images/Logo.png">
+      </div>
       <!-- Navbar Container -->
       <div class="mx-auto relative px-5 max-w-screen-xl w-full flex items-center justify-end">
-        
         <!-- Navbar Menu -->
-        <nav class="flex gap-5">
+        <nav class="flex gap-5 text-black font-semibold">
           <a>Home</a>
           <a>About</a>
-          <a href="https://www.instagram.com/nb.squared/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </nav>
       </div>
     </div>
@@ -44,22 +37,57 @@
     <!-- Hero Section Content -->
     <div class="flex-1 flex items-center">
       <div class="text-center mx-auto">
-        <h1 class="text-6xl font-semibold">Stay tuned for good things to come</h1>
-        <p class="font-light text-3xl mt-5">A world where two NB's explore life together    </p>
-        <a class="px-5 py-2 inline-block bg-cyan-500 text-white hover:bg-cyan-400 transition-colors mt-10" href="https://www.instagram.com/nb.squared/" target="_blank">Check out our Instagram <i class="fa-brands fa-instagram"></i></a>
+        <h1 class="text-6xl font-semibold text-black">Unboxing soon...</h1>
+
+        <h2 class="text-gray-800 font-semibold mb-2">Register your interest:</h2>
+
+        <form action="https://formsubmit.co/08bdd7fdc6e3a3f2a8afb5e51dc3ba19" method="POST">
+        <div class="text-center mt-2">
+          <div class="flex items-center border-2 border-yellow-500 rounded-lg overflow-hidden">
+            
+            <input type="email" name="email"  placeholder="Email address" required class="px-4 py-2 w-full outline-none"/>
+            <button type="submit" class="bg-yellow-400 p-2">
+              <img src="/images/paper_plane.svg" class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M3 12l18-9-2 9-2 2-14 2-2 2v-4l-2 2z" />
+              </img>
+            </button>
+          </div>
+        </form>
       </div>
+
+
     </div>
   </section>
 
     <!-- uncomment this when main.js becomes useful -->
     <!-- <script src="/scripts/main.js"></script> -->
+
 </body>
 
 <footer>
     <!-- <a href="index.html">Home</a>
     <a href="#">About</a>
     <a href="#">Contact</a> -->
-</footer>
 
+    <footer class="bg-yellow-500 py-6 text-center text-black font-semibold">
+      <p class="mb-4">Contact us:</p>
+      <a href="mailto:contact@nbsquared.co.uk" class="text-black font-semibold">contact@nbsquared.co.uk</a>
+      
+      <div class="flex justify-center space-x-4 mt-4">
+        <!-- Social Media Icons -->
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61556163350923"><img src="/images/facebook_icon.svg" class="h-6 w-6 text-black">
+        </a>
+
+        <a href="https://www.instagram.com/nb.squared/" target="_blank"><img src="/images/instagram_icon.svg" class="h-6 w-6 text-black">
+
+        <a href="https://www.tiktok.com/@nb_squared?_t=8r5GCezz8PB&_r=1"><img src="/images/tiktok_icon.svg" class="h-6 w-6 text-black">
+          
+        </a>
+        
+      </div>
+    </footer>
+  
+</footer>
 
 </html>
