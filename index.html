@@ -3,76 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> <!--Links Tailwind in the project-->
-    <link rel="stylesheet" href="/styles/main.css">
-    <!--Font Awesome link for all the icons-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Tab icon & company name -->
-    <link rel="icon" href="/images/Logo.svg">
-
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"> <!-- Tailwind CSS link -->
     <title>NB²Squared</title>
-
+    <style>
+      /* Smooth scrolling effect */
+      html {
+          scroll-behavior: smooth;
+      }
+    </style>
 </head>
-<body class="bg-white min-h-screen">
-  <!-- Hero Section -->
-  <section class="flex flex-col min-h-screen">
-    <!-- Navbar -->
-    <header class="flex justify-between items-center p-5 border-b">
-      <img src="/images/Logo.png" alt="NB²Squared Logo" class="h-12">
-      <nav class="flex space-x-5 font-semibold">
-          <a href="index.html">Home</a>
-          <a href="about.html" class="text-yellow-500">About</a>
+<body class="bg-gray-100">
+
+  <!-- Navbar (Sticky) -->
+  <header class="sticky top-0 bg-white shadow-xl">
+    <div class="flex justify-between items-center p-4 max-w-screen-lg mx-auto">
+      <img src="/images/Logo.png" alt="Site Logo" class="h-12 md:h-16">
+      <nav class="flex space-x-3 md:space-x-5 font-semibold text-sm md:text-base">
+          <a href="#home" class="text-gray-700 hover:text-yellow-500">Home</a>
+          <a href="#about" class="text-gray-700 hover:text-yellow-500">About</a>
       </nav>
+    </div>
   </header>
 
-    <!-- Hero Section Content -->
-    <div class="flex-1 flex items-center">
-      <div class="text-center mx-auto px-5">
-        <h1 class="text-6xl font-semibold text-black mb-4">Unboxing soon...</h1>
-    
-        <h2 class="text-gray-800 font-semibold mb-2">Register your interest:</h2>
-    
-        <form action="https://formsubmit.co/08bdd7fdc6e3a3f2a8afb5e51dc3ba19" method="POST">
-          <div class="text-center mt-2">
-    
-            <div class="flex items-center m-2 border-2 border-yellow-500 rounded-lg overflow-hidden">
-              <input type="name" name="name" placeholder="Name" required class="px-4 py-2 w-full outline-none" />
-            </div>
-    
-            <div class="flex items-center m-2 border-2 border-yellow-500 rounded-lg overflow-hidden">
-              <input type="email" name="email" placeholder="Email address" required class="px-4 py-2 w-full outline-none" />
-              <button type="submit" class="bg-yellow-400 p-2">
-                <img src="/images/paper_plane.svg" class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+  <!-- Home Section -->
+  <section id="home" class="flex items-center justify-center h-screen px-4">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-black">Unboxing soon...</h1>
+      <p class="text-lg md:text-xl text-black mt-4">Register your interest:</p>
+
+      <form action="https://formsubmit.co/08bdd7fdc6e3a3f2a8afb5e51dc3ba19" method="POST">
+        <div class="text-center mt-6 md:mt-8">
+
+          <!-- Name Fields -->
+          <div class="flex flex-col md:flex-row items-center m-2 border-2 border-yellow-500 rounded-lg overflow-hidden">
+            <input type="text" name="first_name" placeholder="First Name" required class="px-4 py-2 w-full outline-none" />
+            <input type="text" name="last_name" placeholder="Last Name" required class="px-4 py-2 w-full outline-none" />
+          </div>
+
+          <!-- Email Field with Submit Button -->
+          <div class="flex items-center m-2 border-2 border-yellow-500 rounded-lg overflow-hidden">
+            <input type="email" name="email" placeholder="Email address" required class="px-4 py-2 w-full outline-none" />
+            <button type="submit" class="bg-yellow-400 p-2">
+              <!-- Submit Icon -->
+              <img src="/images/paper_plane.svg" class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M3 12l18-9-2 9-2 2-14 2-2 2v-4l-2 2z" />
                 </img>
-              </button>
-            </div>
-        </form>
-      </div>
-
+            </button>
+          </div>
+        </div>
+      </form>
 
     </div>
   </section>
 
-    <!-- uncomment this when main.js becomes useful -->
-    <!-- <script src="/scripts/main.js"></script> -->
+  <!-- About Section -->
+  <section id="about" class="flex items-center justify-center h-auto md:h-screen mx-auto px-4 md:px-6 py-16 bg-gray-200">
+    <div class="flex flex-col lg:flex-row lg:space-x-16 max-w-screen-lg mx-auto">
+
+      <!-- Left Content -->
+      <div class="lg:w-2/3">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">About.</h1>
+
+        <p class="mb-4 text-justify text-sm md:text-base">The inspiration for NB² emerged from my quest to turn my tiny, cluttered room into a beautifully organised sanctuary.</p>
+        <p class="mb-4 text-justify text-sm md:text-base">In 2021, I began collecting and repurposing the luxurious marbled boxes from MATCHES, online fashion retailer and my previous employer, using them as gift packaging. Then came my 'eureka' moment: why not use these boxes as storage and decoration, too? Once I started, there was no turning back; everything goes inside a box as long as I can fit it — makeup, cosmetics, electronics, sunglasses, stationery... you name it! I then let the boxes either shine or blend in with my home décor.</p>
+        <p class="mb-4 text-justify text-sm md:text-base">Within the three amazing years with the company, I moved to a slightly bigger flat and, unsurprisingly, my collection grew so extensive that my dad even jokingly questioned my shopping habits once – sacré bleu!</p>
+        <p class="text-justify text-sm md:text-base">I am so passionate about these boxes that I am committed to continually redesigning them to be even more beautiful, durable, and functional. My goal is to expand the product range across various categories, bringing even more pleasure to our lives!</p>
+      </div>
+
+      <!-- Right Content (Mission, Vision, Core Values) -->
+      <div class="lg:w-1/3 mt-8 lg:mt-0 border-2 border-yellow-500 p-6 md:p-8">
+        <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Mission</h2>
+        <p class="text-center mb-6 text-sm md:text-base">To improve lives, one box at a time.</p>
+        
+        <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Vision</h2>
+        <p class="text-center mb-6 text-sm md:text-base">To make the world a tidier, happier place.</p>
+        
+        <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Core Values</h2>
+        <div class="flex justify-center space-x-6">
+          <div class="text-center text-sm md:text-base">
+            <p><span class="text-yellow-500 mr-2">■</span>Positivity</p>
+            <p><span class="text-yellow-500 mr-2">■</span>Wellbeing</p>
+          </div>
+          <div class="text-center text-sm md:text-base">
+            <p><span class="text-yellow-500 mr-2">■</span>Creativity</p>
+            <p><span class="text-yellow-500 mr-2">■</span>Longevity</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-yellow-500 py-6 text-center text-black font-semibold text-sm md:text-base">
+    <p>Contact us:</p>
+    <a href="mailto:contact@nbsquared.co.uk" class="text-black font-semibold">contact@nbsquared.co.uk</a>
+    <div class="flex justify-center space-x-4 mt-4">
+        <a href="https://www.facebook.com/profile.php?id=61556163350923" target="_blank"><img src="/images/facebook_icon.svg" class="h-5 md:h-6 w-5 md:w-6" alt="Facebook"></a>
+        <a href="https://www.instagram.com/nb.squared/" target="_blank"><img src="/images/instagram_icon.svg" class="h-5 md:h-6 w-5 md:w-6" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/@nb_squared?_t=8r5GCezz8PB&_r=1" target="_blank"><img src="/images/tiktok_icon.svg" class="h-5 md:h-6 w-5 md:w-6" alt="TikTok"></a>
+    </div>
+    <p class="pt-4 md:pt-6">&copy; 2024 NB². All rights reserved.</p>
+  </footer>
 
 </body>
-
-    <footer class="bg-yellow-500 py-6 text-center text-black font-semibold">
-      <p class="mb-4">Contact us:</p>
-      <a href="mailto:contact@nbsquared.co.uk" class="text-black font-semibold">contact@nbsquared.co.uk</a>
-      
-      <div class="flex justify-center space-x-4 mt-4">
-        <!-- Social Media Icons -->
-        <a href="https://www.facebook.com/profile.php?id=61556163350923"><img src="/images/facebook_icon.svg" class="h-6 w-6 text-black"></a>
-
-        <a href="https://www.instagram.com/nb.squared/" target="_blank"><img src="/images/instagram_icon.svg" class="h-6 w-6 text-black"></a>
-
-        <a href="https://www.tiktok.com/@nb_squared?_t=8r5GCezz8PB&_r=1"><img src="/images/tiktok_icon.svg" class="h-6 w-6 text-black"></a>
-      </div>
-    </footer>
-
 </html>
