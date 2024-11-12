@@ -2,9 +2,16 @@ module.exports = {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
-      content: ["./src/**/*.{html,js}"],
+      content: [
+        "./src/**/*.{hmtl,js}",
+        "./public/index.html",
+      ],
       theme: {
-        extend: {},
+        extend: {
+          colors: {
+            'primary': '#ffcc00', // Yellow
+          },
+        },
       },
       plugins: [],
     }
